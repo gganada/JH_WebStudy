@@ -5,7 +5,13 @@
     <meta charset="utf-8" />
     <title>List1</title>
     <link rel="stylesheet" href="StyleSheet1.css" />
-
+    <script>
+        function init() {
+            var li3 = document.getElementById("list3");
+            var a = 1;
+            li3.onmouseover = li3.style = "background-color:red";
+        }
+    </script>
 </head>
 <body>
     <p style="color:dimgrey">
@@ -19,18 +25,19 @@
         <div id="MainList">
             <center>
                 <ol id="list_1">
-                    <li><a href="list1.html" style="background-color:lightskyblue;">1번째 리스트</a></li>
+                    <li><a href="list1.html">1번째 리스트</a></li>
                     <li><a href="list2.html">2번째 리스트</a></li>
-                    <li><a href="list3.html">3번째 리스트</a></li>
+                    <li id="list3"><a href="list3.html" style="background-color:lightskyblue;" >3번째 리스트</a></li>
 
                 </ol>
             </center>
 
         </div>
         <div id="sodyd">
-            여기는 첫 번째 리스트 입니다.   
+            여기는 세 번째 리스트 입니다.
+            <input type="text" name="a" />
 
-        </div>    
+        </div>
     </div>
 
 
