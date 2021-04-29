@@ -10,11 +10,11 @@
 <body style="background-image:url('original.gif');background-size:100px;">
     
 
-    <p><h1><a href="index.html">
+    <p><h1><a href="index.html" onmouseover="document.getElementById('MainList').style.display='grid'">
         Hello world!
          </a></h1></p>
     <div id="grid_1">
-        <div id="MainList">
+        <div id="MainList" style="display:none;">
             <center>
                 <ol id="list_1">
                     <li><a href="list1.html">1번째 리스트</a></li>
@@ -24,20 +24,14 @@
                 </ol>
 
 
-                <input type="button" id="butt" value="nightmode" onclick="document.querySelector('body').style.backgroundColor = 'black'; buttoncl; " />
-                <script>
-                    function buttoncl() {
-                        const button = document.getElementById('butt');
-                        const nae = "<div> NyanNyan </div>";
-                        button.innerHTML = nae;
-                    }
-                </script>
+     
+                <input type="button" id="butt" value="nightmode" onclick="document.querySelector('body').style.backgroundColor = 'black'; " />
                 <input type="button" value="daymode" onclick="document.querySelector('body').style.backgroundColor = 'white'; document.querySelector('body').style.color = 'black'; document.querySelector('body').style.borderColor = 'black;';" />
 
             </center>
 
         </div>
-        <div id="sodyd" style="border-top-style:groove;border-top-left-radius:10px;border-top-right-radius:10px;border-left-style:groove;border-right-style:groove; background-color:white;border-width:5px;border-color:yellow; padding-bottom:1fr" >
+        <div id="sodyd" style="border-top-left-radius:10px;border-top-right-radius:10px;border-left-style:groove;border-right-style:groove; background-color:white;border-width:5px;border-color:yellow; margin-right:auto;" onmouseout="document.getElementById('MainList').style.display='none';">
             <p>
                 <center>
                     <a href="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" style="border-style:none;background:none;" target="_blank" title="html5specification">
