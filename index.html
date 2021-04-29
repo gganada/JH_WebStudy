@@ -5,8 +5,9 @@
     <meta charset="utf-8" />
     <title>JhWebStudy</title>
     <link rel="stylesheet" href="StyleSheet1.css" />
+    
 </head>
-<body style="background-image:url('original.gif')">
+<body style="background-image:url('original.gif');background-size:100px;">
     
 
     <p><h1><a href="index.html">
@@ -22,8 +23,16 @@
 
                 </ol>
 
-                <input type="button" value="nightmode" onclick="document.querySelector('body').style.backgroundColor = 'black'; document.querySelector('body').style.color = 'white'; document.querySelector('body').style.borderColor = 'white'; " />
-                <input type="button" value="daymode" onclick="document.querySelector('body').style.backgroundColor = 'white'; document.querySelector('body').style.color = 'black'; document.querySelector('body').style.borderColor='black;'" />
+
+                <input type="button" id="butt" value="nightmode" onclick="document.querySelector('body').style.backgroundColor = 'black'; buttoncl; " />
+                <script>
+                    function buttoncl() {
+                        const button = document.getElementById('butt');
+                        const nae = "<div> NyanNyan </div>";
+                        button.innerHTML = nae;
+                    }
+                </script>
+                <input type="button" value="daymode" onclick="document.querySelector('body').style.backgroundColor = 'white'; document.querySelector('body').style.color = 'black'; document.querySelector('body').style.borderColor = 'black;';" />
 
             </center>
 
