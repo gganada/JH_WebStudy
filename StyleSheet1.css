@@ -35,8 +35,9 @@ li {
 
 @media(min-width:850px) {
     #grid_1 {
-        display: grid;
+        display:grid;
         grid-template-columns: 200px 1fr;
+
     }
 }
 
