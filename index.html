@@ -41,7 +41,29 @@
 
                        " />
 
-                <input type="button" id="sisi" value="Nyan..?" onclick="document.querySelector('body').style.backgroundSize =Math.floor(Math.random()*300)+'px'" />
+                <script>
+                    function test() {
+                        document.querySelector('body').style.backgroundColor = '#' + Math.round(Math.random() * 0xFFFFFF).toString(16);
+                        setTimeout(function () {
+                            test();
+                        }, 5);
+                    }
+
+                </script>
+                <input type="button" id="sisi" value="Nyan..?" onclick="document.querySelector('body').style.backgroundSize =Math.floor((Math.random()+0.1)*300)+'px'" />
+                <input type="button" id="partytime" value="PaRtYtImE!" onclick="
+
+    if (this.value === 'StopParty') {
+        this.value = 'PaRtYtImE';
+    }
+    else {
+        this.value='StopParty'
+        test();
+ 
+        
+        
+    }
+        " />
 
             </center>
 
