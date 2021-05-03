@@ -42,10 +42,14 @@
                        " />
 
                 <script>
+                    var letsparty = 1;
                     function test() {
                         document.querySelector('body').style.backgroundColor = '#' + Math.round(Math.random() * 0xFFFFFF).toString(16);
+                        
                         setTimeout(function () {
-                            test();
+                            if (letsparty) {
+                                test();
+                            }
                         }, 5);
                     }
 
@@ -54,10 +58,13 @@
                 <input type="button" id="partytime" value="PaRtYtImE!" onclick="
 
     if (this.value === 'StopParty') {
+        letsparty = 0;
         this.value = 'PaRtYtImE';
+        
     }
     else {
-        this.value='StopParty'
+        this.value = 'StopParty'
+        letsparty = 1;
         test();
  
         
