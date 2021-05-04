@@ -9,10 +9,29 @@
 </head>
 <body style="background-image:url('original.gif');background-size:100px;">
     
+    <div id="MainGrid">
 
-    <p><h1><a href="index.html" onmouseover="document.getElementById('MainList').style.display = 'grid'; document.querySelector('#grid_1').style.display= 'grid';">
-        Hello world!
-         </a></h1></p>
+        <div id="menu" style="background-color:aliceblue; padding:5px;" onmouseover="document.getElementById('MainList').style.display = 'grid'; document.querySelector('#grid_1').style.display= 'grid';">
+            <center>
+                <h2>
+                    Menu
+                </h2>
+                
+            </center>
+
+        </div>
+        
+        <div>
+            <p>
+                <h1>
+                    <a href="index.html" style="padding:5px">
+                        Hello world!
+                    </a>
+                </h1>
+            </p>
+        </div>
+
+    </div>
     <div id="grid_1">
         <div id="MainList" style="display:flex;">
             <center>
@@ -43,6 +62,7 @@
 
                 <script>
                     var letsparty = 1;
+                    
                     function test() {
                         document.querySelector('body').style.backgroundColor = '#' + Math.round(Math.random() * 0xFFFFFF).toString(16);
                         document.querySelector('body').style.backgroundSize = Math.floor((Math.random() + 0.1) * 300) + 'px';
@@ -59,12 +79,14 @@
 
     if (this.value === 'StopParty') {
         letsparty = 0;
+        document.getElementById('box').style.animationDuration = '2s';
         this.value = 'PaRtYtImE';
         
     }
     else {
         this.value = 'StopParty'
         letsparty = 1;
+        document.getElementById('box').style.animationDuration = '0.3s';
         test();
  
         
@@ -76,7 +98,7 @@
 
         </div>
         <center>
-            <div id="sodyd" style="border-top-left-radius:10px;border-top-right-radius:10px;border-left-style:groove;border-right-style:groove; background-color:white;border-width:5px;border-color:yellow;" onmouseout="document.getElementById('grid_1').style.display = 'flex'; document.getElementById('MainList').style.display = 'none';">
+            <div id="sodyd" style="border-top-left-radius:10px;border-top-right-radius:10px;border-left-style:groove;border-right-style:groove; background-color:white;border-width:5px;border-color:yellow; padding-top:30px" onmouseout="document.getElementById('grid_1').style.display = 'flex'; document.getElementById('MainList').style.display = 'none';">
                 <p>
                     <center>
                         <a href="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" style="border-style:none;background:none;" target="_blank" title="html5specification">
@@ -100,14 +122,25 @@
                 <p>
                     <center>
 
-
+                        <div id="box">
+                            <center>
+                                
+                            </center>
+                            
+                        </div>
 
                     </center>
 
                 </p>
             </div>
         </center>
+
+
+
     </div>
+
+
+
 
 </body>
 </html>

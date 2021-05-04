@@ -14,6 +14,7 @@ h1 {
 }
 
 a {
+    padding:5px;
     text-decoration: none;
     color: blue;
     border-radius: 8px;
@@ -30,15 +31,48 @@ img {
 }
 
 li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 @media(min-width:850px) {
+    #MainGrid{
+        display:grid;
+        grid-template-columns: 200px 1fr;
+    }
     #grid_1 {
         display:grid;
         grid-template-columns: 200px 1fr;
 
     }
+}
+@-webkit-keyframes anime {
+    0% {
+        left: 0px;
+        bottom:0px;
+    }
+    50%{
+        left:150px;
+        bottom:300px;
+    }
+
+    100% {
+        left: 300px;
+        bottom:0px;
+    }
+}
+
+#box {
+    position: absolute;
+    width: 273px;
+    height: 168px;
+    margin-left: -50px;
+    background-image: url('original.gif');
+    color: #fff;
+    animation-name: anime;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
 
 @media(max-width:850px) {
