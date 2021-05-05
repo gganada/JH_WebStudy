@@ -75,6 +75,32 @@ li {
     animation-direction: alternate;
     animation-fill-mode: both;
 }
+@-webkit-keyframes anime2 {
+    0% {
+        left: 0px;
+        bottom: 0px;
+    }
+
+    50% {
+        bottom: 30px;
+    }
+
+    100% {
+        left: 30px;
+        bottom: 0px;
+        transform: scaleX(-1);
+    }
+}
+#box2 {
+    position: absolute;
+    width: 273px;
+    height: 168px;
+    margin-left: -50px;
+    background-image: url('original.gif');
+
+    color: #fff;
+  
+}
 
 @media(max-width:850px) {
     #MainList {

@@ -7,8 +7,37 @@
     <link rel="stylesheet" href="StyleSheet1.css" />
     
 </head>
-<body style="background-image:url('original.gif');background-size:100px;">
-    
+<body style="background-image:url('original.gif');background-size:100px;" onmousemove="action()">
+
+    <script>
+        var letsparty = 1;
+
+        function test() {
+            document.querySelector('body').style.backgroundColor = '#' + Math.round(Math.random() * 0xFFFFFF).toString(16);
+            document.querySelector('body').style.backgroundSize = Math.floor((Math.random() + 0.1) * 300) + 'px';
+            setTimeout(function () {
+                if (letsparty) {
+                    test();
+                }
+            }, 5);
+        }
+
+            function action() {
+                document.getElementById("box2").style.left = event.clientX -100 + 'px';
+                document.getElementById("box2").style.top = event.clientY -100+ 'px';
+
+            }
+       
+
+    </script>
+
+    <div id="box2">
+
+
+    </div>
+
+
+
     <div id="MainGrid">
 
         <div id="menu" style="background-color:aliceblue; padding:5px;" onmouseover="document.getElementById('MainList').style.display = 'grid'; document.querySelector('#grid_1').style.display= 'grid';">
@@ -16,11 +45,11 @@
                 <h2>
                     Menu
                 </h2>
-                
+
             </center>
 
         </div>
-        
+
         <div>
             <p>
                 <h1>
@@ -43,11 +72,11 @@
                 </ol>
 
 
-     
+
                 <input type="button" id="butt" value="nightmode" onclick="document.querySelector('body').style.backgroundColor = 'black'; " />
                 <input type="button" value="daymode" onclick="document.querySelector('body').style.backgroundColor = 'white'; document.querySelector('body').style.color = 'black'; document.querySelector('body').style.borderColor = 'black;';" />
 
-                <input type="button" id="changer" value="nigntmode" onclick=" 
+                <input type="button" id="changer" value="nigntmode" onclick="
     if (this.value === 'daymode') {
         document.querySelector('body').style.backgroundColor = 'white';
         document.querySelector('#changer').value = 'nightmode';
@@ -60,20 +89,7 @@
 
                        " />
 
-                <script>
-                    var letsparty = 1;
-                    
-                    function test() {
-                        document.querySelector('body').style.backgroundColor = '#' + Math.round(Math.random() * 0xFFFFFF).toString(16);
-                        document.querySelector('body').style.backgroundSize = Math.floor((Math.random() + 0.1) * 300) + 'px';
-                        setTimeout(function () {
-                            if (letsparty) {
-                                test();
-                            }
-                        }, 5);
-                    }
 
-                </script>
                 <input type="button" id="sisi" value="Nyan..?" onclick="document.querySelector('body').style.backgroundSize =Math.floor((Math.random()+0.1)*300)+'px'" />
                 <input type="button" id="partytime" value="PaRtYtImE!" onclick="
 
@@ -81,16 +97,16 @@
         letsparty = 0;
         document.getElementById('box').style.animationDuration = '2s';
         this.value = 'PaRtYtImE';
-        
+
     }
     else {
         this.value = 'StopParty'
         letsparty = 1;
         document.getElementById('box').style.animationDuration = '0.3s';
         test();
- 
-        
-        
+
+
+
     }
         " />
 
@@ -124,9 +140,9 @@
 
                         <div id="box">
                             <center>
-                                
+
                             </center>
-                            
+
                         </div>
 
                     </center>
