@@ -9,7 +9,7 @@ h1 {
     margin: 0;
     text-align: center;
     padding: 20px;
-    border-bottom: 1px solid black;
+    border-bottom: 3px solid black;
     color: dimgray;
 }
 
@@ -35,16 +35,10 @@ li {
 }
 
 @media(min-width:850px) {
-    #MainGrid{
-        display:grid;
-        grid-template-columns: 200px 1fr;
-    }
-    #grid_1 {
-        display:grid;
-        grid-template-columns: 200px 1fr;
 
-    }
 }
+
+
 @-webkit-keyframes anime {
     0% {
         left: 0px;
@@ -93,10 +87,11 @@ li {
 }
 #box2 {
     position: absolute;
-    width: 273px;
-    height: 168px;
+    width: 91px;
+    height: 56px;
     margin-left: -50px;
     background-image: url('original.gif');
+   background-size:100%;
 
     color: #fff;
   
@@ -114,12 +109,22 @@ p {
     padding-left: 30px;
 }
 
+.container{
+    height:100vh;
+    display:grid;
+    
+    grid-template-columns: 200px 1fr;
+    grid-template-rows:85px 1fr;
+
+    
+}
+
 div {
     margin: 0;
 }
 
 #MainList {
-    border-right: 1px solid black;
+    border-right: 5px solid black;
 }
 
 ol {
