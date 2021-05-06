@@ -11,7 +11,7 @@
 
     <script>
         var letsparty = 1;
-        
+
 
         function test() {
             document.querySelector('body').style.backgroundColor = '#' + Math.round(Math.random() * 0xFFFFFF).toString(16);
@@ -24,66 +24,70 @@
         }
 
         function action() {
-            document.getElementById("box2").style.left = event.clientX + 'px';
-            document.getElementById("box2").style.top = event.clientY+ 'px';
+            var cat = document.getElementById("box2");
 
+            if (cat.style.left < event.clientX) {
+                
+                
+            }
+            var xx = cat.style.left ;
+            var yy = cat.style.top;
+
+           var xxx  = event.clientX;
+           var yyy =  event.clientY;
         }
 
 
-        
-       
+
+
 
     </script>
 
 
-    <div id="box2">
-
-
-    </div>
 
 
 
     <div class="container">
-        
 
-            <div id="menu" class="item" style="background-color:aliceblue;" onmouseover="document.getElementById('MainList').style.display = 'grid'; document.getElementById('sodyd').style.width = '84vw';">
-                <center>
-                    <h2>
-                        Menu
-                    </h2>
 
-                </center>
+        <div id="menu" class="item" style="background-color:aliceblue;" onmouseover="document.getElementById('MainList').style.display = 'grid'; document.getElementById('sodyd').style.width = '84vw';">
+            <center>
+                <h2>
+                    Menu
+                </h2>
 
-            </div>
+            </center>
 
-            <div class="item">
-                <p>
-                    <h1>
-                        <a href="index.html">
-                            Hello world!
-                        </a>
-                    </h1>
-                </p>
-            </div>
+        </div>
 
-       
-
-        
-            <div id="MainList" class="item" style="display:flex;" onmouseenter="document.getElementById('MainList').style.display = 'none'; document.getElementById('MainList').style.display = 'grid';">
-                <center>
-                    <ol id="list_1">
-                        <li><a href="list1.html">1번째 리스트</a></li>
-                        <li><a href="list2.html">2번째 리스트</a></li>
-                        <li><a href="list3.html">3번째 리스트</a></li>
-
-                    </ol>
+        <div class="item">
+            <p>
+                <h1>
+                    <a href="index.html">
+                        Hello world!
+                    </a>
+                </h1>
+            </p>
+        </div>
 
 
 
-                    <input type="button" id="butt" value="nightmode" onclick="document.querySelector('body').style.backgroundColor = 'black'; " />
-                    <input type="button" value="daymode" onclick="document.querySelector('body').style.backgroundColor = 'white'; document.querySelector('body').style.color = 'black'; document.querySelector('body').style.borderColor = 'black;';" />
 
-                    <input type="button" id="changer" value="nigntmode" onclick="
+        <div id="MainList" class="item" style="display:flex;" onmouseenter="document.getElementById('MainList').style.display = 'none'; document.getElementById('MainList').style.display = 'grid';">
+            <center>
+                <ol id="list_1">
+                    <li><a href="list1.html">1번째 리스트</a></li>
+                    <li><a href="list2.html">2번째 리스트</a></li>
+                    <li><a href="list3.html">3번째 리스트</a></li>
+
+                </ol>
+
+
+
+                <input type="button" id="butt" value="nightmode" onclick="document.querySelector('body').style.backgroundColor = 'black'; " />
+                <input type="button" value="daymode" onclick="document.querySelector('body').style.backgroundColor = 'white'; document.querySelector('body').style.color = 'black'; document.querySelector('body').style.borderColor = 'black;';" />
+
+                <input type="button" id="changer" value="nigntmode" onclick="
     if (this.value === 'daymode') {
         document.querySelector('body').style.backgroundColor = 'white';
         document.querySelector('#changer').value = 'nightmode';
@@ -97,8 +101,8 @@
                        " />
 
 
-                    <input type="button" id="sisi" value="Nyan..?" onclick="document.querySelector('body').style.backgroundSize =Math.floor((Math.random()+0.1)*300)+'px'" />
-                    <input type="button" id="partytime" value="PaRtYtImE!" onclick="
+                <input type="button" id="sisi" value="Nyan..?" onclick="document.querySelector('body').style.backgroundSize =Math.floor((Math.random()+0.1)*300)+'px'" />
+                <input type="button" id="partytime" value="PaRtYtImE!" onclick="
 
     if (this.value === 'StopParty') {
         letsparty = 0;
@@ -117,72 +121,76 @@
     }
         " />
 
-                </center>
-
-            </div>
-
-
-
-
-
-
-
-
-
-
-          
-
-                <div id="sodyd" class="item" style="height:80vh; width:84vw; border-top-left-radius:10px;border-top-right-radius:10px;border-left-style:groove;border-right-style:groove; background-color:white;border-width:5px;border-color:yellow; padding-top:30px" onmouseenter="document.getElementById('MainList').style.display = 'none'; document.getElementById('MainList').style.display = 'none'; document.getElementById('sodyd').style.width= '97vw';">
-
-
-
-                    <p>
-                        <center>
-                            <a href="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" style="border-style:none;background:none;" target="_blank" title="html5specification">
-                                <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" width="300">
-                            </a>
-                            <br />
-                            <label style="color:grey; font-size:12px">사진을 클릭하시면 원본을 볼 수 있습니다.</label>
-                        </center>
-                        <br />
-                        위에 보이는 사진은 구글에서 <strong>예쁜</strong> 이미지를 가져온 것입니다
-                    </p>
-                    <p>
-                        <audio autoplay loop controls id="nyannyan">
-                            <source src="냥캣.mp3" type="audio/mp3">
-                        </audio>
-                        <script>
-                            var audio = document.getElementById("nyannyan");
-                            audio.volume = 0.2;
-                        </script>
-
-
-
-
-                    </p>
-                    <p>
-                        <center>
-
-                            <div id="box">
-                                <center>
-
-                                </center>
-
-                            </div>
-
-                        </center>
-
-                    </p>
-                </div>
-
-
-
+            </center>
 
         </div>
 
 
 
-    
+
+
+
+
+
+
+
+
+
+        <div id="sodyd" class="item" style="height:80vh; width:84vw; border-top-left-radius:10px;border-top-right-radius:10px;border-left-style:groove;border-right-style:groove; background-color:white;border-width:5px;border-color:yellow; padding-top:30px" onmouseenter="document.getElementById('MainList').style.display = 'none'; document.getElementById('MainList').style.display = 'none'; document.getElementById('sodyd').style.width= '97vw';">
+
+
+
+            <p>
+                <center>
+                    <a href="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" style="border-style:none;background:none;" target="_blank" title="html5specification">
+                        <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" width="300">
+                    </a>
+                    <br />
+                    <label style="color:grey; font-size:12px">사진을 클릭하시면 원본을 볼 수 있습니다.</label>
+                </center>
+                <br />
+                위에 보이는 사진은 구글에서 <strong>예쁜</strong> 이미지를 가져온 것입니다
+            </p>
+            <p>
+                <audio autoplay loop controls id="nyannyan">
+                    <source src="냥캣.mp3" type="audio/mp3">
+                </audio>
+                <script>
+                    var audio = document.getElementById("nyannyan");
+                    audio.volume = 0.2;
+                </script>
+
+
+
+
+            </p>
+            <p>
+                <center>
+
+                    <div id="box">
+                        <center>
+
+                        </center>
+
+                    </div>
+
+                </center>
+
+            </p>
+        </div>
+
+
+
+
+    </div>
+
+
+    <div id="box2">
+
+
+    </div>
+
+
 
 
 

@@ -38,6 +38,20 @@ li {
 
 }
 
+@-webkit-keyframes momo {
+    0%{
+        left: 10px;
+        top: 10px;
+    }
+    100%{
+        left: 10px;
+        top: 10px;
+    }
+
+
+
+}
+
 
 @-webkit-keyframes anime {
     0% {
