@@ -9,42 +9,7 @@
 </head>
 <body style="background-image:url('original.gif');background-size:100px;" onclick="action()">
 
-    <script>
-        var letsparty = 1;
 
-
-        function test() {
-            document.querySelector('body').style.backgroundColor = '#' + Math.round(Math.random() * 0xFFFFFF).toString(16);
-            document.querySelector('body').style.backgroundSize = Math.floor((Math.random() + 0.1) * 300) + 'px';
-            setTimeout(function () {
-                if (letsparty) {
-                    test();
-                }
-            }, 5);
-        }
-
-        function action() {
-            var cat = document.getElementById("box2");
-
-            if (cat.style.left < event.clientX) {
-                
-                
-            }
-            var xx = cat.style.left ;
-            var yy = cat.style.top;
-
-           var xxx  = event.clientX;
-            var yyy = event.clientY;
-
-            cat.style.left = xxx+ 'px';
-            cat.style.top = yyy + 'px';
-        }
-
-
-
-
-
-    </script>
 
 
 
@@ -53,7 +18,7 @@
     <div class="container">
 
 
-        <div id="menu" class="item" style="background-color:aliceblue;" onmouseover="document.getElementById('MainList').style.display = 'grid'; document.getElementById('sodyd').style.width = '84vw';">
+        <div id="menu" class="item" style="background-color:aliceblue;" onmouseover="document.getElementById('MainList').style.display = 'grid'; document.getElementById('sodyd').style.width = '84vw';" onclick=" toto();">
             <center>
                 <h2>
                     Menu
@@ -139,7 +104,12 @@
 
 
 
-        <div id="sodyd" class="item" style="height:80vh; width:84vw; border-top-left-radius:10px;border-top-right-radius:10px;border-left-style:groove;border-right-style:groove; background-color:white;border-width:5px;border-color:yellow; padding-top:30px" onmouseenter="document.getElementById('MainList').style.display = 'none'; document.getElementById('MainList').style.display = 'none'; document.getElementById('sodyd').style.width= '97vw';">
+        <div id="sodyd" class="item" style="height:80vh; width:84vw; border-top-left-radius:10px;border-top-right-radius:10px;border-left-style:groove;border-right-style:groove; background-color:white;border-width:5px;border-color:yellow; padding-top:30px" onmouseenter="
+    if (!tog) {
+        document.getElementById('MainList').style.display = 'none';
+        document.getElementById('MainList').style.display = 'none';
+        document.getElementById('sodyd').style.width = '97vw';
+    }">
 
 
 
@@ -157,6 +127,7 @@
             <p>
                 <audio autoplay loop controls id="nyannyan">
                     <source src="냥캣.mp3" type="audio/mp3">
+                   
                 </audio>
                 <script>
                     var audio = document.getElementById("nyannyan");
@@ -188,10 +159,87 @@
     </div>
 
 
-    <div id="box2">
+    <div id="box2" style="left:10px; top:10px; ">
 
 
     </div>
+
+
+
+        <!--         스크립트 부분 입니다.           -->
+
+    <script>
+        var letsparty = 1;
+        var cat = document.getElementById("box2");
+
+        var xx = cat.clientTop;
+        var yy = cat.style.top - 'px';
+        
+        var xxx;
+        var yyy;
+
+        var tog = 0;
+
+        var menu = document.getElementById('menu');
+
+
+        function test() {
+            document.querySelector('body').style.backgroundColor = '#' + Math.round(Math.random() * 0xFFFFFF).toString(16);
+            document.querySelector('body').style.backgroundSize = Math.floor((Math.random() + 0.1) * 300) + 'px';
+            setTimeout(function () {
+                if (letsparty) {
+                    test();
+                }
+            }, 5);
+        }
+
+        function action() {
+
+
+            xx = cat.clientLeft;
+            yy = cat.clientTop;
+
+             xxx = event.clientX;
+             yyy = event.clientY;
+
+            var i;
+
+            if (xxx != xx) {
+              
+                for (i = xx; i <= xxx; i++) {
+                 
+                    
+                        cat.style.left = i + 'px';
+                        cat.style.top = (yyy - yy) * (i - xx) / (xxx - xx) + yy + 'px';
+
+                    
+                    
+                   
+                }
+            }
+
+
+
+        }
+
+        function toto() {
+            if (menu.style.backgroundColor === 'aliceblue') {
+                menu.style.backgroundColor = "dimgrey";
+                tog = 1;
+            }
+            else if (menu.style.backgroundColor === 'dimgrey') {
+                menu.style.backgroundColor = 'aliceblue';
+                tog = 0;
+            }
+
+        }
+
+
+
+
+
+
+    </script>
 
 
 
