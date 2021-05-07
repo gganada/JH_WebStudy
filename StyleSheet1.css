@@ -85,17 +85,17 @@ li {
 }
 @-webkit-keyframes anime2 {
     0% {
-        left: 0px;
-        bottom: 0px;
+        
+       
     }
 
     50% {
-        bottom: 30px;
+        
+      
     }
 
     100% {
-        left: 30px;
-        bottom: 0px;
+      
         transform: scaleX(-1);
     }
 }
@@ -105,10 +105,12 @@ li {
     height: 56px;
     margin-left: -50px;
     background-image: url('original.gif');
-   background-size:100%;
-
+    background-size: 100%;
+    animation-name: anime2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
     color: #fff;
-  
 }
 
 @media(max-width:850px) {
