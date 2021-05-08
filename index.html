@@ -18,7 +18,13 @@
     <div class="container">
 
 
-        <div id="menu" class="item" style="background-color:aliceblue;" onmouseover="document.getElementById('MainList').style.display = 'grid'; document.getElementById('sodyd').style.width = '84vw';" onclick=" toto();">
+        <div id="menu" class="item" style="background-color:aliceblue; cursor:pointer; transition: 1s;" onmouseover="
+    document.getElementById('MainList').style.display = 'grid';
+    document.getElementById('sodyd').style.width = '84vw';
+    
+
+
+    " onclick=" toto();">
             <center>
                 <h2>
                     Menu
@@ -41,7 +47,7 @@
 
 
 
-        <div id="MainList" class="item" style="display:flex;" onmouseenter="document.getElementById('MainList').style.display = 'none'; document.getElementById('MainList').style.display = 'grid';">
+        <div id="MainList" class="item" style="background-color:navajowhite;margin-top:10px; border-radius:8px;   transition:1s ;display:flex;" onmouseenter="document.getElementById('MainList').style.display = 'none'; document.getElementById('MainList').style.display = 'grid';">
             <center>
                 <ol id="list_1">
                     <li><a href="list1.html">1번째 리스트</a></li>
@@ -106,7 +112,7 @@
 
         <div id="sodyd" class="item" style="height:80vh; width:84vw; border-top-left-radius:10px;border-top-right-radius:10px;border-left-style:groove;border-right-style:groove; background-color:white;border-width:5px;border-color:yellow; padding-top:30px" onmouseenter="
     if (!tog) {
-        document.getElementById('MainList').style.display = 'none';
+        document.getElementById('MainList').style.scale = '(0,1)';
         document.getElementById('MainList').style.display = 'none';
         document.getElementById('sodyd').style.width = '97vw';
     }">
@@ -203,21 +209,9 @@
              yyy = event.clientY;
 
             var i;
-
-            if (xxx != xx) {
-              
-                for (i = xx; i <= xxx; i++) {
-                 
-                    
-                        cat.style.left = i + 'px';
-                        cat.style.top = (yyy - yy) * (i - xx) / (xxx - xx) + yy + 'px';
-
-                    
-                    
-                   
-                }
-            }
-
+            cat.style.left = xxx + 'px';
+            cat.style.top = yyy + 'px';
+            cat.style.rotate = 30;
 
 
         }

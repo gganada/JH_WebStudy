@@ -83,6 +83,14 @@ li {
     animation-direction: alternate;
     animation-fill-mode: both;
 }
+@keyframes leftin{
+    from{
+        width: 0px;
+    }
+    to {
+        width: 200px;
+    }
+}
 @-webkit-keyframes anime2 {
     0% {
         
@@ -106,11 +114,9 @@ li {
     margin-left: -50px;
     background-image: url('original.gif');
     background-size: 100%;
-    animation-name: anime2;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+ 
     color: #fff;
+    transition: 0.5s;
 }
 
 @media(max-width:850px) {
