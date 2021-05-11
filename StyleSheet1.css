@@ -83,12 +83,13 @@ li {
     animation-direction: alternate;
     animation-fill-mode: both;
 }
-@keyframes leftin{
+@keyframes tete{
     from{
-        width: 0px;
+        left:-100px;
+       
     }
     to {
-        width: 200px;
+       left:100px; 
     }
 }
 @-webkit-keyframes anime2 {
@@ -109,12 +110,15 @@ li {
 }
 #box2 {
     position: absolute;
+    top:0px;
+    left:0px;
     width: 91px;
     height: 56px;
     margin-left: -50px;
     background-image: url('original.gif');
     background-size: 100%;
- 
+   
+
     color: #fff;
     transition: 0.5s;
 }
@@ -147,6 +151,11 @@ div {
 
 #MainList {
     border-right: 5px solid black;
+    background-color:navajowhite;
+    margin-top:10px;
+    border-radius:8px;
+    transition:1s;
+    display:flex;
 }
 
 ol {
@@ -157,5 +166,22 @@ ol {
 
 #sodyd {
     margin: 20px;
+    height:80vh;
+    width:84vw;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-left-style:groove;
+    border-right-style:groove;
+    background-color:white;
+    border-block-end-width:5px;
+    border-block-color:yellow;
+    padding-top:30px;
+
+}
+
+#menu{
+    background-color:aliceblue;
+    cursor:pointer;
+    transition:1s;
 }
 
