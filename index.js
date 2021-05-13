@@ -1,3 +1,5 @@
+
+
 var letsparty = 1;
 var cat = document.getElementById("box2");
 
@@ -25,17 +27,31 @@ function test() {
 function action() {
 
 
-    xx = cat.clientLeft;
+    xx = cat.offsetLeft;
     yy = cat.clientTop;
 
     xxx = event.clientX;
     yyy = event.clientY;
-
+    event.offsetLeft;
     var i;
+
   
-    cat.style.left = xxx + 'px';
-    cat.style.top = yyy + 'px';
-    cat.style.rotate = 30;
+   
+   
+    if (xx < xxx) {
+        cat.style.webkitTransform = 'scale(1,1)';
+        cat.style.left = xxx + 'px';
+        cat.style.top = yyy + 'px';
+        
+    }
+    else {
+        cat.style.webkitTransform = 'scale(-1,1)';
+        cat.style.left = xxx + 100 + 'px';
+        cat.style.top = yyy + 'px';
+        
+    }
+
+  
 
 
 
