@@ -75,7 +75,7 @@
 
         #box {
             position: absolute;
-            width: 273px;
+            width: 271px;
             height: 168px;
             margin-left: -50px;
             background-image: url('original.gif');
@@ -88,7 +88,15 @@
             transform-origin:bottom;
            
         }
-
+        #box3 {
+            position: absolute;
+            width: 271px;
+            height: 168px;
+            margin-left: -50px;
+            background-image: url('original.gif');
+            color: #fff;
+            transform-origin:center;
+        }
         @keyframes tete {
             from {
                 left: -100px;
@@ -122,7 +130,8 @@
             background-size: 100%;
             color: #fff;
             transition: 0.5s;
-            transform-origin: 0% 0%;
+            transform-origin: center;
+            
             
         }
 
@@ -320,8 +329,11 @@
 
 
             </p>    
-            <p>
-                <center>
+
+                    <div id="box3" style="left:700px; top:500px;">
+
+                    </div>
+               
 
                     <div id="box">
                         <center>
@@ -330,9 +342,9 @@
 
                     </div>
 
-                </center>
+                
 
-            </p>
+            
         </div>
 
 

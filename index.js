@@ -14,8 +14,23 @@ var menu;
 
 function pett() {
     var jumpCat = document.getElementById("box");
-    jumpCat.style.webkitTransform = 'scale(1,' + (900-event.clientY) * 0.0015 + ')';
-   
+    jumpCat.style.webkitTransform = 'scale(1,' + (900 - event.clientY) * 0.0015 + ')';
+    var rotCat = document.getElementById('box3');
+    if (rotCat.offsetLeft > event.clientX) {
+        rotCat.style.webkitTransform = 'scaleX(-1)';
+    }
+    else {
+        rotCat.style.webkitTransform = 'scaleX(1)';
+    }
+
+    if (rotCat.offsetTop > event.clientY) {
+
+        rotCat.style.webkitTransform = 'rotate(' + (-1)*Math.acos((event.clientX - rotCat.offsetLeft) / (Math.sqrt(Math.pow(event.clientX - rotCat.offsetLeft, 2) + Math.pow(event.clientY - rotCat.offsetTop, 2)))) + 'rad)';
+    } else {
+        rotCat.style.webkitTransform = 'rotate(' + Math.acos((event.clientX - rotCat.offsetLeft) / (Math.sqrt(Math.pow(event.clientX - rotCat.offsetLeft, 2) + Math.pow(event.clientY - rotCat.offsetTop, 2)))) + 'rad)';
+    }
+
+    
 }
 
 function test() {
@@ -32,7 +47,7 @@ function action() {
 
 
     xx = cat.offsetLeft;
-    yy = cat.clientTop;
+    
 
     xxx = event.clientX;
     yyy = event.clientY;
@@ -50,7 +65,7 @@ function action() {
     }
     else {
         cat.style.webkitTransform = 'scale(-1,1)';
-        cat.style.left = xxx + 100 + 'px';
+        cat.style.left = xxx +  'px';
         cat.style.top = yyy + 'px';
         
     }
