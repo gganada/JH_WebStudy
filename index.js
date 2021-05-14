@@ -12,7 +12,11 @@ var yyy;
 var tog = 0;
 var menu;
 
-
+function pett() {
+    var jumpCat = document.getElementById("box");
+    jumpCat.style.webkitTransform = 'scale(1,' + (900-event.clientY) * 0.0015 + ')';
+   
+}
 
 function test() {
     document.querySelector('body').style.backgroundColor = '#' + Math.round(Math.random() * 0xFFFFFF).toString(16);
