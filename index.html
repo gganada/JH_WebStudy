@@ -86,6 +86,7 @@
             animation-direction: alternate;
             animation-fill-mode: both;
             transform-origin:bottom;
+            
            
         }
         #box3 {
@@ -151,6 +152,7 @@
             display: grid;
             grid-template-columns: 200px 1fr;
             grid-template-rows: 85px 1fr;
+            transition:0.5s;
         }
 
         div {
@@ -164,6 +166,7 @@
             border-radius: 8px;
             transition: 1s;
             display: flex;
+            transform-origin:left;
         }
 
         ol {
@@ -184,6 +187,7 @@
             border-block-end-width: 5px;
             border-block-color: yellow;
             padding-top: 30px;
+            transform-origin:center;
         }
 
         #menu {
@@ -202,12 +206,14 @@
 
 
 
-    <div class="container">
+    <div class="container" id="container">
 
 
         <div id="menu" class="item" onmouseover="
     document.getElementById('MainList').style.display = 'grid';
+    document.getElementById('MainList').style.webkitTransform = 'scale(1,1)';
     document.getElementById('sodyd').style.width = '84vw';
+    
     "
     onclick="toto()">
             <center>
@@ -295,13 +301,19 @@
 
 
 
-        <div id="sodyd" class="item" style="height:80vh; width:84vw; border-top-left-radius:10px;border-top-right-radius:10px;border-left-style:groove;border-right-style:groove; background-color:white;border-width:5px;border-color:yellow; padding-top:30px" onmouseenter="
-    if(!tog){
-        document.getElementById('MainList').style.scale = '(0,1)';
-        document.getElementById('MainList').style.display = 'none';
-        document.getElementById('sodyd').style.width = '97vw';
+        <div id="sodyd" class="item" style="height:80vh; width:84vw; border-top-left-radius:10px;border-top-right-radius:10px;border-left-style:groove;border-right-style:groove; background-color:white;border-width:5px;border-color:yellow; padding-top:30px;" onmouseenter="
+    if (!tog) {
+
+        document.getElementById('MainList').style.webkitTransform = 'scale(0,1)';
+
+        document.getElementById('container').style.gridTemplateAreas
+
+
     }">
 
+            <!--
+                여기부터 본문입니다. -----------------------------------------------------------------
+            -->
 
 
             <p>
@@ -310,12 +322,17 @@
                         <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" width="300">
                     </a>
                     <br />
+
+
+
+
+
                     <label style="color:grey; font-size:12px">사진을 클릭하시면 원본을 볼 수 있습니다.</label>
                 </center>
                 <br />
                 위에 보이는 사진은 구글에서 <strong>예쁜</strong> 이미지를 가져온 것입니다
             </p>
-              <p>
+            <p>
                 <audio autoplay loop controls id="nyannyan">
                     <source src="nyancat.mp3" type="audio/mp3">
 
@@ -328,23 +345,29 @@
 
 
 
-            </p>    
+            </p>
 
-                    <div id="box3" style="left:700px; top:500px;">
 
-                    </div>
-               
 
-                    <div id="box">
-                        <center>
+            <!--
+                여기까지 본문입니다. -----------------------------------------------------------------
+            -->
 
-                        </center>
+            <div id="box3" style="left:700px; top:500px;">
 
-                    </div>
+            </div>
 
-                
 
-            
+            <div id="box">
+                <center>
+
+                </center>
+
+            </div>
+
+
+
+
         </div>
 
 
