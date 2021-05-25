@@ -4,201 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <title>JhWebStudy</title>
-    <!--  <link rel="stylesheet" href="StyleSheet1.css" /> -->
+    <link rel="stylesheet" href="StyleSheet1.css" /> 
     <link rel="shortcut.icon" href="#" />
-    <style>
-
-        body {
-            margin: 0;
-        }
-
-        h1 {
-            margin: 0;
-            text-align: center;
-            padding: 20px;
-            border-bottom: 3px solid black;
-            color: dimgray;
-        }
-
-        a {
-            padding: 5px;
-            text-decoration: none;
-            color: blue;
-            border-radius: 8px;
-            border-style: groove;
-            border-color: green;
-            background-color: navajowhite;
-        }
-
-        img {
-            border-radius: 10px;
-            border-style: solid;
-            border-color: purple;
-        }
-
-        li {
-            margin-bottom: 20px;
-        }
-
-        @media(min-width:850px) {
-        }
-
-        @-webkit-keyframes momo {
-            0% {
-                left: 10px;
-                top: 10px;
-            }
-
-            100% {
-                left: 10px;
-                top: 10px;
-            }
-        }
-
-
-        @-webkit-keyframes anime {
-            0% {
-                left: 0px;
-                bottom: 0px;
-            }
-
-            50% {
-                bottom: 300px;
-            }
-
-            100% {
-                left: 300px;
-                bottom: 0px;
-
-            }
-        }
-
-        #box {
-            position: absolute;
-            width: 271px;
-            height: 168px;
-            margin-left: -50px;
-            background-image: url('original.gif');
-            color: #fff;
-            animation-name: anime;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            animation-fill-mode: both;
-            transform-origin:bottom;
-            
-           
-        }
-        #box3 {
-            position: absolute;
-            width: 271px;
-            height: 168px;
-            margin-left: -50px;
-            background-image: url('original.gif');
-            color: #fff;
-            transform-origin:center;
-        }
-        @keyframes tete {
-            from {
-                left: -100px;
-            }
-
-            to {
-                left: 100px;
-            }
-        }
-
-        @-webkit-keyframes anime2 {
-            0% {
-            }
-
-            50% {
-            }
-
-            100% {
-                transform: scaleX(-1);
-            }
-        }
-
-        #box2 {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 91px;
-            height: 56px;
-            margin-left: -50px;
-            background-image: url('original.gif');
-            background-size: 100%;
-            color: #fff;
-            transition: 0.5s;
-            transform-origin: center;
-            
-            
-        }
-
-        @media(max-width:850px) {
-            #MainList {
-                border-bottom: double 10px yellow;
-            }
-        }
-
-        p {
-            margin: 0;
-            padding-left: 30px;
-        }
-
-        .container {
-            height: 100vh;
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            grid-template-rows: 85px 1fr;
-            transition:0.5s;
-        }
-
-        div {
-            margin: 0;
-        }
-
-        #MainList {
-            border-right: 5px solid black;
-            background-color: navajowhite;
-            margin-top: 10px;
-            border-radius: 8px;
-            transition: 1s;
-            display: flex;
-            transform-origin:left;
-        }
-
-        ol {
-            color: green;
-            margin: 0;
-            padding-top: 20px;
-        }
-
-        #sodyd {
-            margin: 20px;
-            height: 80vh;
-            width: 84vw;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            border-left-style: groove;
-            border-right-style: groove;
-            background-color: white;
-            border-block-end-width: 5px;
-            border-block-color: yellow;
-            padding-top: 30px;
-            transform-origin:center;
-        }
-
-        #menu {
-            background-color: aliceblue;
-            cursor: pointer;
-            transition: 1s;
-        }
-    </style>
 
 </head>
-<body style="background-image:url('original.gif');background-size:100px;" onclick="action()"; onmousemove="pett()">
+<body style="background-image:url('original.gif');background-size:100px; display:flex; flex-wrap:wrap;" onclick="action()"; onmousemove="pett()" >
 
 
 
@@ -206,39 +16,52 @@
 
 
 
-    <div class="container" id="container">
+    <div class="container1" id="container">
 
 
         <div id="menu" class="item" onmouseover="
     document.getElementById('MainList').style.display = 'grid';
     document.getElementById('MainList').style.webkitTransform = 'scale(1,1)';
-    document.getElementById('sodyd').style.width = '84vw';
-    
+    getElementById('sodyd').style.paddingLeft = '230px';
+
+
     "
-    onclick="toto()">
+             onclick="toto()" style="background-image:url('Hamburger_icon.svg');background-size: 48px 48px " ;>
             <center>
                 <h2>
-                    Menu
+                    
                 </h2>
 
             </center>
 
         </div>
 
-        <div class="item">
+        <div class="item" style="background-color:white; height:50px">
             <p>
-                <h1>
+                <h2>
                     <a href="index.html">
                         Hello world!
                     </a>
-                </h1>
+                </h2>
             </p>
+        </div>
+        <div id="title" class="item" style="background-color:white;">
+
+
         </div>
 
 
+    </div>
+    
 
 
-        <div id="MainList" class="item" onmouseenter="document.getElementById('MainList').style.display = 'none'; document.getElementById('MainList').style.display = 'grid';">
+
+
+
+
+
+    
+        <div id="MainList" class="item" style="width:200px; display:flex" onmouseenter="document.getElementById('MainList').style.display = 'none'; document.getElementById('MainList').style.display = 'grid';">
             <center>
                 <ol id="list_1">
                     <li><a href="list1.html">1번째 리스트</a></li>
@@ -272,6 +95,7 @@
     if (this.value === 'StopParty') {
         letsparty = 0;
         document.getElementById('box').style.animationDuration = '2s';
+        document.getElementById('sodyd').style.backgroundColor='rgba(255,255,255,1)'
         this.value = 'PaRtYtImE';
 
     }
@@ -279,6 +103,7 @@
         this.value = 'StopParty'
         letsparty = 1;
         document.getElementById('box').style.animationDuration = '0.3s';
+        document.getElementById('sodyd').style.backgroundColor='rgba(255,0,0,0)'
         test();
 
 
@@ -301,19 +126,20 @@
 
 
 
-        <div id="sodyd" class="item" style="height:80vh; width:84vw; border-top-left-radius:10px;border-top-right-radius:10px;border-left-style:groove;border-right-style:groove; background-color:white;border-width:5px;border-color:yellow; padding-top:30px;" onmouseenter="
+
+        <div id="sodyd" class="item"onmouseenter="
     if (!tog) {
 
         document.getElementById('MainList').style.webkitTransform = 'scale(0,1)';
 
         document.getElementById('container').style.gridTemplateAreas
-
+        getElementById('sodyd').style.paddingLeft = '30px';
 
     }">
 
             <!--
-                여기부터 본문입니다. -----------------------------------------------------------------
-            -->
+        여기부터 본문입니다. -----------------------------------------------------------------
+    -->
 
 
             <p>
@@ -348,7 +174,7 @@
             </p>
 
 
-
+        </div>
             <!--
                 여기까지 본문입니다. -----------------------------------------------------------------
             -->
@@ -368,12 +194,12 @@
 
 
 
-        </div>
+        
 
 
 
 
-    </div>
+ 
 
 
     <div id="box2" style="left:10px; top:10px; ">

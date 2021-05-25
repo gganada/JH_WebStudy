@@ -47,6 +47,7 @@ function pett() {
 }
 
 function test() {
+    
     document.querySelector('body').style.backgroundColor = '#' + Math.round(Math.random() * 0xFFFFFF).toString(16);
     document.querySelector('body').style.backgroundSize = Math.floor((Math.random() + 0.1) * 300) + 'px';
     setTimeout(function () {

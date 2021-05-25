@@ -1,25 +1,3 @@
-var http = require('http');
-var fs = require('fs');
-var url = require('url');
-var app = http.createServer(function (request, response) {
-    var _url = request.url;
-    var queryData = url.parse(_url, true).query;
-    console.log(queryData.id);
-    if (_url == '/') {
-        _url = '/onon.html';
-        console.log('ok');
-    }
-    if (_url == '/favicon.ico') {
-
-        return response.writeHead(404);
-    }   
-    
-    response.setHeader("Content-Type", 'text/html');
-    response.writeHead(200);
-    fs.readFile(`data/${queryData.id}`, 'utf8', function (err, deskk) {
-        console.log('haha'+deskk);
-   
-    var templet = `
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -368,7 +346,33 @@ var app = http.createServer(function (request, response) {
 
 
             <p>
-                ${deskk}
+                <center>
+                    <a href="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" style="border-style:none;background:none;" target="_blank" title="html5specification">
+                        <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" width="300">
+                    </a>
+                    <br />
+
+
+
+
+
+                    <label style="color:grey; font-size:12px">사진을 클릭하시면 원본을 볼 수 있습니다.</label>
+                </center>
+                <br />
+                위에 보이는 사진은 구글에서 <strong>예쁜</strong> 이미지를 가져온 것입니다
+            </p>
+            <p>
+                <audio autoplay loop controls id="nyannyan">
+                    <source src="nyancat.mp3" type="audio/mp3">
+
+                </audio>
+                <script>
+                    var audio = document.getElementById("nyannyan");
+                    audio.volume = 0.2;
+                </script>
+
+
+
 
             </p>
 
@@ -420,10 +424,3 @@ var app = http.createServer(function (request, response) {
 
 </body>
 </html>
-`;
-    response.end(templet);
-    })
-    //response.end(queryData.id);
-    //response.end(fs.readFileSync(__dirname + _url)); 
-});
-app.listen(8080);
