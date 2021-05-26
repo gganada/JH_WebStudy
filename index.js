@@ -18,6 +18,8 @@ var scl;
 var lef;
 var topp;
 
+var currentColorMode= 'white';
+
 function pett() {
     var jumpCat = document.getElementById("box");
     jumpCat.style.webkitTransform = 'scale(1,' + (900 - event.clientY) * 0.0015 + ')';
@@ -46,18 +48,18 @@ function pett() {
     
 }
 
-function test() {
+function randColor() {
     
     document.querySelector('body').style.backgroundColor = '#' + Math.round(Math.random() * 0xFFFFFF).toString(16);
     document.querySelector('body').style.backgroundSize = Math.floor((Math.random() + 0.1) * 300) + 'px';
     setTimeout(function () {
         if (letsparty) {
-            test();
+            randColor();
         }
     }, 5);
 }
 
-function action() {
+function moveCat() {
 
 
     xx = cat.offsetLeft;
@@ -86,14 +88,70 @@ function action() {
 
 }
 
-function toto() {
+function menuFix() {
     if (!tog) {
         document.getElementById("menu").style.backgroundColor = 'dimgrey';
         tog = 1;
     }
     else {
-        document.getElementById("menu").style.backgroundColor = 'aliceblue';
+        document.getElementById("menu").style.backgroundColor = 'white';
         tog = 0;
     }
 
+}
+
+function menuPopup(){
+    document.getElementById('MainList').style.display = 'grid';
+    document.getElementById('MainList').style.webkitTransform = 'scale(1,1)';
+    document.getElementById('sodyd').style.paddingLeft = '230px';
+}
+
+function darkMode() {
+    if (currentColorMode = 'white') {
+        var all = document.getElementsByClassName('item');
+        for (var i = 0; i < all.length; i++) {
+            all[i].style.backgroundColor = '#1f2023';
+        }
+        document.getElementById('sodyd').style.color = 'white';
+        currentColorMode = 'black';
+    }
+   
+}
+
+function dayMode() {
+    if (currentColorMode = 'black') {
+        var all = document.getElementsByClassName('item');
+        for (var i = 0; i < all.length; i++) {
+            all[i].style.backgroundColor = 'white';
+        }
+        document.getElementById('sodyd').style.color = 'black';
+        currentColorMode = 'white';
+    }
+
+}
+
+function partyTime() {
+    if (this.value === 'StopParty') {
+        letsparty = 0;
+        document.getElementById('box').style.animationDuration = '2s';
+        if (currentColorMode == 'black') {
+            document.getElementById('sodyd').style.backgroundColor = 'rgba(31,32,35,1)';
+        }
+        else if(currentColorMode =='white'){
+            document.getElementById('sodyd').style.backgroundColor = 'rgba(255,255,255,1)';
+        }
+        this.value = 'PaRtYtImE';
+
+    }
+    else {
+        this.value = 'StopParty'
+        letsparty = 1;
+        document.getElementById('box').style.animationDuration = '0.3s';
+        document.getElementById('sodyd').style.backgroundColor = 'rgba(0,0,0,0)';
+
+        randColor();
+
+
+
+    }
 }

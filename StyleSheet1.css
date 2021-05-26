@@ -1,5 +1,9 @@
 ﻿body {
     margin: 0;
+    background-image: url('original.gif');
+    background-size: 100px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -30,6 +34,116 @@ img {
 
 li {
     margin-bottom: 20px;
+}
+
+p {
+    margin: 0;
+    padding-left: 30px;
+}
+
+div {
+    margin: 0;
+}
+
+ol {
+    color: green;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.container1 {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 50px 150px 1fr;
+    height: 50px;
+}
+
+.container2 {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+  
+}
+
+.item {
+    background-color: white;
+    transition: 1s;
+}
+
+#box {
+    position: absolute;
+    width: 271px;
+    height: 168px;
+    margin-left: -50px;
+    background-image: url('original.gif');
+    color: #fff;
+    animation-name: anime;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    transform-origin: bottom;
+}
+
+#box3 {
+    position: absolute;
+    width: 271px;
+    height: 168px;
+    margin-left: -50px;
+    background-image: url('original.gif');
+    color: #fff;
+    transform-origin: center;
+}
+
+#box2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 91px;
+    height: 56px;
+    margin-left: -50px;
+    background-image: url('original.gif');
+    background-size: 100%;
+    color: #fff;
+    transition: 0.5s;
+    transform-origin: center;
+}
+
+#MainList {
+    position: absolute;
+    border-right: 5px solid black;
+  
+    display: flex;
+    transform-origin: left;
+    top: 50px;
+    height: 90vh;
+    width: 200px;
+    display: flex;
+}
+
+
+#sodyd {
+
+    padding-top: 30px;
+    transform-origin: center;
+    padding-left: 230px;
+    width: 100vw;
+    height: 90vh;
+    padding-top: 30px;
+
+}
+
+#menu {
+
+    cursor: pointer;
+
+    background-image: url('Hamburger_icon.svg');
+    background-size: 48px 48px;
+}
+
+#title {
+
 }
 
 @media(min-width:850px) {
@@ -64,30 +178,6 @@ li {
     }
 }
 
-#box {
-    position: absolute;
-    width: 271px;
-    height: 168px;
-    margin-left: -50px;
-    background-image: url('original.gif');
-    color: #fff;
-    animation-name: anime;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-fill-mode: both;
-    transform-origin: bottom;
-}
-
-#box3 {
-    position: absolute;
-    width: 271px;
-    height: 168px;
-    margin-left: -50px;
-    background-image: url('original.gif');
-    color: #fff;
-    transform-origin: center;
-}
 
 @keyframes tete {
     from {
@@ -109,85 +199,10 @@ li {
     100% {
         transform: scaleX(-1);
     }
-}
 
-#box2 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 91px;
-    height: 56px;
-    margin-left: -50px;
-    background-image: url('original.gif');
-    background-size: 100%;
-    color: #fff;
-    transition: 0.5s;
-    transform-origin: center;
 }
-
 @media(max-width:850px) {
     #MainList {
         border-bottom: double 10px yellow;
     }
-}
-
-p {
-    margin: 0;
-    padding-left: 30px;
-}
-
-.container1 {
-    width: 100vw;
-    display: grid;
-    grid-template-columns: 50px 150px 1fr;
-    height: 50px;
-}
-
-.container2 {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    transition: 0.5s;
-}
-
-.item {
-    background-color: white;
-}
-
-div {
-    margin: 0;
-}
-
-#MainList {
-    position:absolute;
-    border-right: 5px solid black;
-    transition: 1s;
-    display: flex;
-    transform-origin: left;
-    top:50px;
-    height:90vh;
-}
-
-ol {
-    color: green;
-    margin: 0;
-    padding-top: 20px;
-}
-
-#sodyd {
-    background-color: white;
-    padding-top: 30px;
-    transform-origin: center;
-    padding-left: 230px;
-    width: 100vw;
-    height: 90vh;
-    padding-top: 30px;
-    transition: 1s;
-}
-
-#menu {
-    background-color: white;
-    cursor: pointer;
-    transition: 1s;
 }

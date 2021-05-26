@@ -8,31 +8,15 @@
     <link rel="shortcut.icon" href="#" />
 
 </head>
-<body style="background-image:url('original.gif');background-size:100px; display:flex; flex-wrap:wrap;" onclick="action()"; onmousemove="pett()" >
 
-
-
-
-
+<body onclick="moveCat()"; onmousemove="pett()" >
 
 
     <div class="container1" id="container">
 
 
-        <div id="menu" class="item" onmouseover="
-    document.getElementById('MainList').style.display = 'grid';
-    document.getElementById('MainList').style.webkitTransform = 'scale(1,1)';
-    getElementById('sodyd').style.paddingLeft = '230px';
-
-
-    "
-             onclick="toto()" style="background-image:url('Hamburger_icon.svg');background-size: 48px 48px " ;>
-            <center>
-                <h2>
-                    
-                </h2>
-
-            </center>
+        <div id="menu" class="item" onmouseover="menuPopup();" onclick="menuFix();">
+     
 
         </div>
 
@@ -45,23 +29,17 @@
                 </h2>
             </p>
         </div>
-        <div id="title" class="item" style="background-color:white;">
+        <div id="title" class="item">
 
 
         </div>
 
 
     </div>
+    <!--            여기까지 상단 부분입니다.              -->
     
 
-
-
-
-
-
-
-    
-        <div id="MainList" class="item" style="width:200px; display:flex" onmouseenter="document.getElementById('MainList').style.display = 'none'; document.getElementById('MainList').style.display = 'grid';">
+        <div id="MainList" class="item">
             <center>
                 <ol id="list_1">
                     <li><a href="list1.html">1번째 리스트</a></li>
@@ -72,8 +50,8 @@
 
 
 
-                <input type="button" id="butt" value="nightmode" onclick="document.querySelector('body').style.backgroundColor = 'black'; " />
-                <input type="button" value="daymode" onclick="document.querySelector('body').style.backgroundColor = 'white'; document.querySelector('body').style.color = 'black'; document.querySelector('body').style.borderColor = 'black;';" />
+                <input type="button" id="butt" value="nightmode" onclick="darkMode(); " />
+                <input type="button" value="daymode" onclick="dayMode();" />
 
                 <input type="button" id="changer" value="nigntmode" onclick="
     if (this.value === 'daymode') {
@@ -87,29 +65,10 @@
     }
 
                        " />
-
+                 
 
                 <input type="button" id="sisi" value="Nyan..?" onclick="document.querySelector('body').style.backgroundSize =Math.floor((Math.random()+0.1)*300)+'px'" />
-                <input type="button" id="partytime" value="PaRtYtImE!" onclick="
-
-    if (this.value === 'StopParty') {
-        letsparty = 0;
-        document.getElementById('box').style.animationDuration = '2s';
-        document.getElementById('sodyd').style.backgroundColor='rgba(255,255,255,1)'
-        this.value = 'PaRtYtImE';
-
-    }
-    else {
-        this.value = 'StopParty'
-        letsparty = 1;
-        document.getElementById('box').style.animationDuration = '0.3s';
-        document.getElementById('sodyd').style.backgroundColor='rgba(255,0,0,0)'
-        test();
-
-
-
-    }
-        " />
+                <input type="button" id="partytime" value="PaRtYtImE!" onclick="partyTime(); " />
 
             </center>
 
