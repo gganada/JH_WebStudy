@@ -155,3 +155,11 @@ function partyTime() {
 
     }
 }
+
+function togg(){
+        
+    if (tog ==0) {
+        document.getElementById('MainList').style.webkitTransform = 'scale(0,1)';
+        document.getElementById('sodyd').style.paddingLeft = '30px';
+    }
+}

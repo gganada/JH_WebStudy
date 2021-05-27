@@ -20,7 +20,7 @@
 
         </div>
 
-        <div class="item" style="background-color:white; height:50px">
+        <div class="item">
             <p>
                 <h2>
                     <a href="index.html">
@@ -55,19 +55,18 @@
 
                 <input type="button" id="changer" value="nigntmode" onclick="
     if (this.value === 'daymode') {
-        document.querySelector('body').style.backgroundColor = 'white';
+   
         document.querySelector('#changer').value = 'nightmode';
 
     }
     else {
-        document.querySelector('body').style.backgroundColor = 'black';
+
         document.querySelector('#changer').value = 'daymode';
     }
 
                        " />
                  
 
-                <input type="button" id="sisi" value="Nyan..?" onclick="document.querySelector('body').style.backgroundSize =Math.floor((Math.random()+0.1)*300)+'px'" />
                 <input type="button" id="partytime" value="PaRtYtImE!" onclick="partyTime(); " />
 
             </center>
@@ -86,19 +85,9 @@
 
 
 
-        <div id="sodyd" class="item"onmouseenter="
-    if (!tog) {
+        <div id="sodyd" class="item"onmouseenter=" togg();">
 
-        document.getElementById('MainList').style.webkitTransform = 'scale(0,1)';
-
-        document.getElementById('container').style.gridTemplateAreas
-        getElementById('sodyd').style.paddingLeft = '30px';
-
-    }">
-
-            <!--
-        여기부터 본문입니다. -----------------------------------------------------------------
-    -->
+            <!--        여기부터 본문입니다. ------------------------------------------------------------------->
 
 
             <p>
@@ -117,11 +106,14 @@
                 <br />
                 위에 보이는 사진은 구글에서 <strong>예쁜</strong> 이미지를 가져온 것입니다
             </p>
-            <p>
+
+            <p>                         <!-- 노래가 나오는 코드 입니다     -->
+                                            
                 <audio autoplay loop controls id="nyannyan">
                     <source src="nyancat.mp3" type="audio/mp3">
 
                 </audio>
+                                                    
                 <script>
                     var audio = document.getElementById("nyannyan");
                     audio.volume = 0.2;
@@ -134,37 +126,26 @@
 
 
         </div>
-            <!--
-                여기까지 본문입니다. -----------------------------------------------------------------
-            -->
+            <!-- 여기까지 본문입니다. -----------------------------------------------------------------     -->
 
-            <div id="box3" style="left:700px; top:500px;">
+        <div id="box3" style="left:700px; top:500px;">  <!-- 회전고양이 입니다 -->
 
-            </div>
+        </div>
 
 
-            <div id="box">
-                <center>
+        <div id="box">     <!-- 좌측 하단 점프하는 고양이 입니다.-->
+            <center>
 
-                </center>
+            </center>
 
-            </div>
+        </div>
 
 
 
-
-        
-
+        <div id="box2" style="left:10px; top:10px; ">  <!-- 마우스를 누르면 움직이는 고양이 입니다.-->
 
 
-
- 
-
-
-    <div id="box2" style="left:10px; top:10px; ">
-
-
-    </div>
+        </div>
 
 
 
