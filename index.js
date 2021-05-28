@@ -90,14 +90,30 @@ function moveCat() {
 
 function menuFix() {
     if (!tog) {
-        document.getElementById("menu").style.backgroundColor = 'dimgrey';
         tog = 1;
     }
     else {
-        document.getElementById("menu").style.backgroundColor = 'white';
         tog = 0;
     }
+    menuUpdate();
 
+}
+
+function menuUpdate() {
+    if (!tog) {
+        if (currentColorMode == 'black') document.getElementById("menu").style.backgroundColor = 'black';
+        else document.getElementById("menu").style.backgroundColor = 'white';
+    }
+    else {
+        document.getElementById("menu").style.backgroundColor = 'dimgrey';
+    }
+
+    if (currentColorMode == 'white') {
+        document.getElementById('menuIcon').style.filter = 'invert(0)';
+    }
+    else {
+        document.getElementById('menuIcon').style.filter = 'invert(1)';
+    }
 }
 
 function menuPopup(){
@@ -113,8 +129,10 @@ function darkMode() {
             all[i].style.backgroundColor = '#1f2023';
         }
         document.getElementById('sodyd').style.color = 'white';
+        document.getElementById('MainList').style.borderRightColor = 'white';
         currentColorMode = 'black';
     }
+    menuUpdate();
    
 }
 
@@ -125,9 +143,11 @@ function dayMode() {
             all[i].style.backgroundColor = 'white';
         }
         document.getElementById('sodyd').style.color = 'black';
+        document.getElementById('MainList').style.borderRightColor = 'black';
+        document.getElementById
         currentColorMode = 'white';
     }
-
+    menuUpdate();
 }
 
 function partyTime() {
@@ -154,6 +174,7 @@ function partyTime() {
 
 
     }
+    menuUpdate();
 }
 
 function togg(){
