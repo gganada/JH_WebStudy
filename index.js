@@ -1,6 +1,6 @@
 
 
-var letsparty = 1;
+var letsparty = 0;
 var cat = document.getElementById("box2");
 
 var xx = cat.clientTop;
@@ -12,46 +12,64 @@ var yyy;
 var tog = 0;
 var menu;
 
-var rot;
+var rot = 0;
 var scl;
 
-var lef;
-var topp;
+var partyRot = 0.001;
+
+var jumpCat = document.getElementById("box");
+var rotCat = document.getElementById('box3');
+
+var lef = 700 + 271 / 2;
+var topp = rotCat.offsetTop;
 
 var currentColorMode= 'white';
 
-function pett() {
-    var jumpCat = document.getElementById("box");
-    jumpCat.style.webkitTransform = 'scale(1,' + (900 - event.clientY) * 0.0015 + ')';
-    var rotCat = document.getElementById('box3');
 
-    lef = 700 + 271 / 2;
-    topp = rotCat.offsetTop;
+function pett() {
+    jumpCat.style.webkitTransform = 'scale(1,' + (900 - event.clientY) * 0.0015 + ')';
+
+
+
+    if (!letsparty) {
 
     if (lef > event.clientX) {
         scl = -1;   
     }
     else {
         scl = 1;
-    }
+
+        }
 
 
-    rot =  Math.acos((event.clientX -lef) / (Math.sqrt(Math.pow(event.clientX -lef, 2) + Math.pow(event.clientY - topp , 2))));
+
+        rot = Math.acos((event.clientX - lef) / (Math.sqrt(Math.pow(event.clientX - lef, 2) + Math.pow(event.clientY - topp, 2))));
+
     if (rotCat.offsetTop > event.clientY) {
         rot *= -1;
        
     }
 
-    rotCat.style.webkitTransform = 'rotate(' + rot + 'rad) scaleY(' + scl + ')';
 
-   
-    
+    }
+
+    RotUpdate();
+
+}
+
+function RotUpdate() {
+    rotCat.style.webkitTransform = 'rotate(' + rot + 'rad) scaleY(' + scl + ')';
 }
 
 function randColor() {
     
     document.querySelector('body').style.backgroundColor = '#' + Math.round(Math.random() * 0xFFFFFF).toString(16);
     document.querySelector('body').style.backgroundSize = Math.floor((Math.random() + 0.1) * 300) + 'px';
+    partyRot = partyRot - 0.05;
+    rot = partyRot;
+    RotUpdate();
+
+
     setTimeout(function () {
         if (letsparty) {
             randColor();
@@ -151,7 +169,7 @@ function dayMode() {
 }
 
 function partyTime() {
-    if (this.value === 'StopParty') {
+    if (letsparty) {
         letsparty = 0;
         document.getElementById('box').style.animationDuration = '2s';
         if (currentColorMode == 'black') {
@@ -160,18 +178,17 @@ function partyTime() {
         else if(currentColorMode =='white'){
             document.getElementById('sodyd').style.backgroundColor = 'rgba(255,255,255,1)';
         }
-        this.value = 'PaRtYtImE';
+        document.getElementById('partytime').value = 'PaRtYtImE';
 
     }
     else {
-        this.value = 'StopParty'
+        document.getElementById('partytime').value = 'StopParty';
         letsparty = 1;
         document.getElementById('box').style.animationDuration = '0.3s';
         document.getElementById('sodyd').style.backgroundColor = 'rgba(0,0,0,0)';
-
+       
         randColor();
-
-
+        
 
     }
     menuUpdate();
