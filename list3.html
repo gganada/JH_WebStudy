@@ -4,364 +4,117 @@
 <head>
     <meta charset="utf-8" />
     <title>list3</title>
-    <!--  <link rel="stylesheet" href="StyleSheet1.css" /> -->
+    <link rel="stylesheet" href="StyleSheet1.css" />
     <link rel="shortcut.icon" href="#" />
-    <style>
-
-        body {
-            margin: 0;
-        }
-
-        h1 {
-            margin: 0;
-            text-align: center;
-            padding: 20px;
-            border-bottom: 3px solid black;
-            color: dimgray;
-        }
-
-        a {
-            padding: 5px;
-            text-decoration: none;
-            color: blue;
-            border-radius: 8px;
-            border-style: groove;
-            border-color: green;
-            background-color: navajowhite;
-        }
-
-        img {
-            border-radius: 10px;
-            border-style: solid;
-            border-color: purple;
-        }
-
-        li {
-            margin-bottom: 20px;
-        }
-
-        @media(min-width:850px) {
-        }
-
-        @-webkit-keyframes momo {
-            0% {
-                left: 10px;
-                top: 10px;
-            }
-
-            100% {
-                left: 10px;
-                top: 10px;
-            }
-        }
-
-
-        @-webkit-keyframes anime {
-            0% {
-                left: 0px;
-                bottom: 0px;
-            }
-
-            50% {
-                bottom: 300px;
-            }
-
-            100% {
-                left: 300px;
-                bottom: 0px;
-            }
-        }
-
-        #box {
-            position: absolute;
-            width: 271px;
-            height: 168px;
-            margin-left: -50px;
-            background-image: url('original.gif');
-            color: #fff;
-            animation-name: anime;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            animation-fill-mode: both;
-            transform-origin: bottom;
-        }
-
-        #box3 {
-            position: absolute;
-            width: 271px;
-            height: 168px;
-            margin-left: -50px;
-            background-image: url('original.gif');
-            color: #fff;
-            transform-origin: center;
-        }
-
-        @keyframes tete {
-            from {
-                left: -100px;
-            }
-
-            to {
-                left: 100px;
-            }
-        }
-
-        @-webkit-keyframes anime2 {
-            0% {
-            }
-
-            50% {
-            }
-
-            100% {
-                transform: scaleX(-1);
-            }
-        }
-
-        #box2 {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 91px;
-            height: 56px;
-            margin-left: -50px;
-            background-image: url('original.gif');
-            background-size: 100%;
-            color: #fff;
-            transition: 0.5s;
-            transform-origin: center;
-        }
-
-        @media(max-width:850px) {
-            #MainList {
-                border-bottom: double 10px yellow;
-            }
-        }
-
-        p {
-            margin: 0;
-            padding-left: 30px;
-        }
-
-        .container {
-            height: 100vh;
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            grid-template-rows: 85px 1fr;
-            transition: 0.5s;
-        }
-
-        div {
-            margin: 0;
-        }
-
-        #MainList {
-            border-right: 5px solid black;
-            background-color: navajowhite;
-            margin-top: 10px;
-            border-radius: 8px;
-            transition: 1s;
-            display: flex;
-            transform-origin: left;
-        }
-
-        ol {
-            color: green;
-            margin: 0;
-            padding-top: 20px;
-        }
-
-        #sodyd {
-            margin: 20px;
-            height: 80vh;
-            width: 84vw;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            border-left-style: groove;
-            border-right-style: groove;
-            background-color: white;
-            border-block-end-width: 5px;
-            border-block-color: yellow;
-            padding-top: 30px;
-            transform-origin: center;
-        }
-
-        #menu {
-            background-color: aliceblue;
-            cursor: pointer;
-            transition: 1s;
-        }
-    </style>
 
 </head>
-<body style="background-image:url('original.gif');background-size:100px;" onclick="action()" ; onmousemove="pett()">
+
+<body onclick="moveCat()" ; onmousemove="pett()">
 
 
+    <div class="container1" id="container">
 
 
-
-
-
-    <div class="container" id="container">
-
-
-        <div id="menu" class="item" onmouseover="
-    document.getElementById('MainList').style.display = 'grid';
-    document.getElementById('MainList').style.webkitTransform = 'scale(1,1)';
-    document.getElementById('sodyd').style.width = '84vw';
-
-    "
-             onclick="toto()">
+        <div id="menu" class="item" onmouseover="menuPopup();" onclick="menuFix();">
             <center>
-                <h2>
-                    Menu
-                </h2>
-
+                <img src="Hamburger_icon.svg" id="menuIcon" />
             </center>
-
         </div>
 
         <div class="item">
             <p>
-                <h1>
+                <h2>
                     <a href="index.html">
                         Hello world!
                     </a>
-                </h1>
+                </h2>
             </p>
+        </div>
+        <div id="title" class="item">
+
+
         </div>
 
 
+    </div>
+    <!--            여기까지 상단 부분입니다.              -->
 
 
-        <div id="MainList" class="item" onmouseenter="document.getElementById('MainList').style.display = 'none'; document.getElementById('MainList').style.display = 'grid';">
-            <center>
-                <ol id="list_1">
-                    <li><a href="list1.html">1번째 리스트</a></li>
-                    <li><a href="list2.html">2번째 리스트</a></li>
-                    <li><a href="list3.html">3번째 리스트</a></li>
+    <div id="MainList" class="item">
+        <center>
+            <ol id="list_1">
+                <li><a href="list1.html">1번째 리스트</a></li>
+                <li><a href="list2.html">2번째 리스트</a></li>
+                <li><a href="list3.html">3번째 리스트</a></li>
 
-                </ol>
+            </ol>
 
 
 
-                <input type="button" id="butt" value="nightmode" onclick="document.querySelector('body').style.backgroundColor = 'black'; " />
-                <input type="button" value="daymode" onclick="document.querySelector('body').style.backgroundColor = 'white'; document.querySelector('body').style.color = 'black'; document.querySelector('body').style.borderColor = 'black;';" />
+            <input type="button" id="butt" value="nightmode" onclick="darkMode(); " />
+            <input type="button" value="daymode" onclick="dayMode();" />
 
-                <input type="button" id="changer" value="nigntmode" onclick="
+            <input type="button" id="changer" value="nigntmode" onclick="
     if (this.value === 'daymode') {
-        document.querySelector('body').style.backgroundColor = 'white';
+
         document.querySelector('#changer').value = 'nightmode';
 
     }
     else {
-        document.querySelector('body').style.backgroundColor = 'black';
+
         document.querySelector('#changer').value = 'daymode';
     }
 
                        " />
 
 
-                <input type="button" id="sisi" value="Nyan..?" onclick="document.querySelector('body').style.backgroundSize =Math.floor((Math.random()+0.1)*300)+'px'" />
-                <input type="button" id="partytime" value="PaRtYtImE!" onclick="
+            <input type="button" id="partytime" value="PaRtYtImE!" onclick="partyTime(); " />
 
-    if (this.value === 'StopParty') {
-        letsparty = 0;
-        document.getElementById('box').style.animationDuration = '2s';
-        this.value = 'PaRtYtImE';
-
-    }
-    else {
-        this.value = 'StopParty'
-        letsparty = 1;
-        document.getElementById('box').style.animationDuration = '0.3s';
-        test();
-
-
-
-    }
-        " />
-
-            </center>
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-        <div id="sodyd" class="item" style="height:80vh; width:84vw; border-top-left-radius:10px;border-top-right-radius:10px;border-left-style:groove;border-right-style:groove; background-color:white;border-width:5px;border-color:yellow; padding-top:30px;" onmouseenter="
-    if (!tog) {
-
-        document.getElementById('MainList').style.webkitTransform = 'scale(0,1)';
-
-        document.getElementById('container').style.gridTemplateAreas
-
-
-    }">
-
-            <!--
-                여기부터 본문입니다. -----------------------------------------------------------------
-            -->
-
-
-            <p>
-
-
-                    <center>
-                <h4>
-
-                    여기는 list 3 입니다.
-                </h4>
-                    </center>
-                <br />
-                <br />
-                3은 2보다 크고 4보다 작은 자연수로, 자연수의 세번째 수. 피보나치 수열의 네 번째 수다. 2번째 소수며, 첫번째 홀수 소수다. 앞의 소수는 2, 뒤의 소수는 5다. 또한 가장 작은 메르센 소수다.
-                <br />
-                <br />
-                3의 배수를 구할 때, 수가 너무 클 경우에는 각 자릿수를 모두 더해서 나온 수를 보고 3의 배수인지 판별하는 방법이 있다. 예를 들어 '1234567890이 3의 배수가 맞는가?' 란 문제에서 각 자릿수를 모두 더하면 1+2+3+4+5+6+7+8+9+0=45, 45는 3의 배수이므로 1234567890도 3의 배수임을 알 수 있다.
-
-
-            </p>
-
-
-
-            <!--
-                여기까지 본문입니다. -----------------------------------------------------------------
-            -->
-
-            <div id="box3" style="left:700px; top:500px;">
-
-            </div>
-
-
-            <div id="box">
-                <center>
-
-                </center>
-
-            </div>
-
-
-
-
-        </div>
-
-
-
+        </center>
 
     </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+    <div id="sodyd" class="item" onmouseenter=" togg();">
+
+        <!--        여기부터 본문입니다. ------------------------------------------------------------------->
+        2보다 크고 4보다 작은 자연수로, 자연수의 세번째 수. 피보나치 수열의 네 번째 수다. 2번째 소수며, 첫번째 홀수 소수다. 앞의 소수는 2, 뒤의 소수는 5다. 또한 가장 작은 메르센 소수다.
+        <br /><br />
+        3의 배수를 구할 때, 수가 너무 클 경우에는 각 자릿수를 모두 더해서 나온 수를 보고 3의 배수인지 판별하는 방법이 있다. 예를 들어 '1234567890이 3의 배수가 맞는가?' 란 문제에서 각 자릿수를 모두 더하면 1+2+3+4+5+6+7+8+9+0=45, 45는 3의 배수이므로 1234567890도 3의 배수임을 알 수 있다.
+
+
+    </div>
+    <!-- 여기까지 본문입니다. -----------------------------------------------------------------     -->
+
+    <div id="box3" style="left:700px; top:500px;">
+        <!-- 회전고양이 입니다 -->
+
+    </div>
+
+
+    <div id="box">
+        <!-- 좌측 하단 점프하는 고양이 입니다.-->
+        <center>
+
+        </center>
+
+    </div>
+
+
+
     <div id="box2" style="left:10px; top:10px; ">
+        <!-- 마우스를 누르면 움직이는 고양이 입니다.-->
 
 
     </div>
